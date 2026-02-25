@@ -152,12 +152,12 @@ web-1  |  * Running on http://172.21.0.2:5000
 
 | No | Screenshot | Keterangan |
 |----|------------|------------|
-| 1 | ![Container Running](screenshots/01-container-running.png) | Container yang sedang berjalan |
-| 2 | ![Docker Images](screenshots/02-docker-images.png) | Daftar Docker images |
-| 3 | ![Dockerfile](screenshots/03-dockerfile-content.png) | Isi file Dockerfile |
-| 4 | ![Docker Build](screenshots/04-docker-build.png) | Proses docker build |
-| 5 | ![App Browser](screenshots/05-app-browser.png) | Aplikasi berjalan di browser |
-| 6 | ![Compose Up](screenshots/06-compose-up.png) | Docker Compose up |
+| 1 | ![Container Running](screenshots/01-container-running.png) | Container Docker sedang berjalan (hasil perintah docker ps) |
+| 2 | ![Nginx Browser](screenshots/02-nginx-browser.png) | Tampilan Nginx default page di browser (localhost) |
+| 3 | ![Docker Build](screenshots/03-docker-build.png) | Proses build image menggunakan perintah docker build |
+| 4 | ![Custom Image](screenshots/04-custom-image.png) | Image custom berhasil dibuat dan terlihat pada docker images |
+| 5 | ![Compose PS](screenshots/05-compose-ps.png) | Daftar service yang berjalan menggunakan docker compose ps |
+| 6 | ![Compose Services](screenshots/06-compose-services.png) | Tampilan service Docker Compose yang berjalan dan dapat diakses melalui browser |
 
 ---
 
