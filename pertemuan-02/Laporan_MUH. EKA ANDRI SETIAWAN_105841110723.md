@@ -7,10 +7,10 @@
 
 | Item | Keterangan |
 |------|------------|
-| **Nama** | ASHABUL KAHFI |
-| **NIM** | 105841108523 |
+| **Nama** | MUH. EKA ANDRI SETIAWAN |
+| **NIM** | 105841110723 |
 | **Kelas** | 5C |
-| **Tanggal** | 2026-02-24 |
+| **Tanggal** | 2026-02-25 |
 
 ---
 
@@ -18,29 +18,29 @@
 
 ### Apa itu Docker?
 
-Docker adalah sebuah platform open-source yang memungkinkan developer untuk merancang, menguji, dan menerapkan aplikasi dengan cepat menggunakan container.
+Docker adalah platform containerization yang digunakan untuk membangun, mengemas, dan menjalankan aplikasi dalam suatu lingkungan terisolasi yang disebut container. Docker memungkinkan aplikasi berjalan secara konsisten di berbagai lingkungan, karena seluruh dependensi dan konfigurasi yang dibutuhkan telah dikemas dalam satu paket.
 
-- Container adalah lingkungan terisolasi yang mengemas kode aplikasi beserta semua dependensinya (library, runtime, konfigurasi) sehingga aplikasi dapat berjalan dengan konsisten di lingkungan komputasi mana pun (laptop, server pengujian, atau production).
+Container adalah unit eksekusi ringan yang berisi aplikasi beserta seluruh library, dependensi, dan konfigurasi yang diperlukan untuk menjalankannya. Container berjalan di atas sistem operasi host dengan berbagi kernel yang sama, sehingga lebih efisien dan cepat dibandingkan mesin virtual.
 
-- Images adalah cetak biru (blueprint) bersifat read-only yang berisi instruksi untuk membuat container. Jika image adalah "resep masakan", maka container adalah "kue" yang sudah jadi dan siap dimakan.
+Image adalah template atau cetakan dasar yang digunakan untuk membuat container. Image bersifat statis dan tidak berubah, sedangkan container merupakan hasil eksekusi dari image tersebut.
 
-- Perbedaannya dengan VM: Virtual Machine (VM) memvirtualisasikan perangkat keras (hardware) dan membutuhkan Sistem Operasi (OS) tamu yang lengkap untuk setiap aplikasinya. Sebaliknya, Docker memvirtualisasikan OS, sehingga beberapa container dapat berbagi kernel OS yang sama dari komputer host. Hal ini membuat Docker jauh lebih ringan, cepat, dan hemat sumber daya dibandingkan VM.
+Perbedaan utama antara container dan virtual machine (VM) terletak pada arsitekturnya. Virtual machine menjalankan sistem operasi tersendiri di atas hypervisor, sehingga membutuhkan sumber daya yang lebih besar. Sementara itu, container tidak memerlukan sistem operasi terpisah karena berbagi kernel dengan host, sehingga lebih ringan, cepat dijalankan, dan efisien dalam penggunaan resource.
 
-### Komponen Utama Docker
+### Jelaskan Komponen Utama Docker (Images, Containers, Registry)
 
-1. Images: Paket executable yang ringan dan mandiri. Image menjadi dasar pembuatan container.
+1.  Image adalah template atau cetakan dasar yang digunakan untuk membuat container. Image berisi aplikasi, dependensi, library, serta konfigurasi yang diperlukan agar aplikasi dapat berjalan. Image bersifat read-only dan tidak berubah. Dari satu image, dapat dibuat banyak container dengan konfigurasi yang sama.
 
-2. Containers: Instansiasi dari image yang sedang berjalan (running environment). Container dapat dibuat, dimulai, dihentikan, dipindahkan, atau dihapus dengan perintah Docker API atau CLI.
+2.  Container adalah instansi yang berjalan dari sebuah image. Container merupakan lingkungan terisolasi yang menjalankan aplikasi beserta seluruh dependensinya. Berbeda dengan image yang bersifat statis, container bersifat dinamis karena dapat dijalankan, dihentikan, dimodifikasi, maupun dihapus sesuai kebutuhan.
 
-3. Registry: Layanan penyimpanan dan distribusi untuk Docker images. Contoh paling populer adalah Docker Hub (seperti GitHub, tetapi khusus untuk menyimpan images).
+3.  Registry adalah tempat penyimpanan dan distribusi image Docker. Registry memungkinkan pengguna untuk mengunggah (push) dan mengunduh (pull) image. Contoh registry publik yang umum digunakan adalah Docker Hub. Registry dapat bersifat publik maupun privat sesuai kebutuhan organisasi.
 
 ### Perbedaan Docker vs Virtual Machine
 
-1. Arsitektur: VM memiliki Guest OS (OS Tamu) sendiri di atas Hypervisor. Container berjalan di atas Docker Engine dan berbagi kernel dengan OS Host.
+Perbedaan Docker Container dan Virtual Machine (VM) terletak pada arsitektur, penggunaan sumber daya, dan cara menjalankan sistem operasi.
 
-2. Ukuran: VM berukuran sangat besar (Gigabytes) karena mengemas seluruh sistem operasi. Container sangat kecil (Megabytes) karena hanya berisi aplikasi dan dependensinya.
+Docker Container adalah lingkungan terisolasi yang berjalan di atas sistem operasi host dan berbagi kernel yang sama. Container hanya mengemas aplikasi beserta dependensinya tanpa membawa sistem operasi lengkap. Karena itu, container bersifat ringan, cepat dijalankan, dan lebih efisien dalam penggunaan CPU serta memori.
 
-3. Waktu Booting: VM membutuhkan waktu lama (menit) untuk booting seperti menyalakan komputer biasa. Container bisa menyala dalam hitungan detik bahkan milidetik.
+Virtual Machine (VM) adalah mesin virtual yang berjalan di atas hypervisor dan memiliki sistem operasi sendiri (guest OS). Setiap VM memerlukan alokasi resource tersendiri seperti CPU, RAM, dan storage, sehingga ukurannya lebih besar dan waktu booting lebih lama dibanding container.
 
 ---
 
